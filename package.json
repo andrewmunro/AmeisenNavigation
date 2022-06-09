@@ -1,0 +1,19 @@
+{
+  "name": "AmeisenNavigation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Jnnshschl/AmeisenNavigation.git",
+  "author": "Andrew Munro <synestry@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node -r esbuild-runner/register client.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.41",
+    "esbuild": "^0.14.43",
+    "esbuild-runner": "^2.2.1"
+  },
+  "dependencies": {
+    "byte-buffer": "^2.0.0"
+  }
+}

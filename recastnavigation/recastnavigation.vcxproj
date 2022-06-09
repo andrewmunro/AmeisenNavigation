@@ -57,6 +57,17 @@
     <Text Include="License.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
+    <VCTargetsPath Condition="'$(DesignTimeBuild)'!='true' AND $(Configuration.Contains('Wasm'))">./</VCTargetsPath>
+    <MSBuildProjectExtensionsPath Condition="'$(DesignTimeBuild)'!='true' AND $(Configuration.Contains('Wasm'))">./</MSBuildProjectExtensionsPath>
+    <GCCBuild_UseWSL>false</GCCBuild_UseWSL>
+    <GCCToolCompilerStyle Condition="$(Configuration.Contains('Wasm'))">llvm</GCCToolCompilerStyle>
+
+    <VCTargetsPath Condition="'$(DesignTimeBuild)'!='true' AND $(Configuration.Contains('GCC'))">./</VCTargetsPath>
+    <MSBuildProjectExtensionsPath Condition="'$(DesignTimeBuild)'!='true' AND $(Configuration.Contains('GCC'))">./</MSBuildProjectExtensionsPath>
+
+    <VCTargetsPath Condition="'$(DesignTimeBuild)'!='true' AND $(Configuration.Contains('Linux'))">./</VCTargetsPath>
+    <MSBuildProjectExtensionsPath Condition="'$(DesignTimeBuild)'!='true' AND $(Configuration.Contains('Linux'))">./</MSBuildProjectExtensionsPath>
+
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{E1E5031F-CCFD-45B9-9DB1-57050AABCCFA}</ProjectGuid>
     <RootNamespace>recastnavigation</RootNamespace>
@@ -66,7 +77,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -89,7 +100,7 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" Condition="'$(VCTargetsPath)' != '.' AND '$(VCTargetsPath)' != '.\' AND '$(VCTargetsPath)' != './'" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
@@ -196,7 +207,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" Condition="'$(VCTargetsPath)' != '.' AND '$(VCTargetsPath)' != '.\' AND '$(VCTargetsPath)' != './'" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
 </Project>

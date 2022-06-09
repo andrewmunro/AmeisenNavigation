@@ -1,0 +1,49 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\amunr\\Projects\\AmeisenNavigation\\AmeisenNavigation\\AmeisenNavigation.vcxproj": {}
+  },
+  "projects": {
+    "C:\\Users\\amunr\\Projects\\AmeisenNavigation\\AmeisenNavigation\\AmeisenNavigation.vcxproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\amunr\\Projects\\AmeisenNavigation\\AmeisenNavigation\\AmeisenNavigation.vcxproj",
+        "projectName": "AmeisenNavigation",
+        "projectPath": "C:\\Users\\amunr\\Projects\\AmeisenNavigation\\AmeisenNavigation\\AmeisenNavigation.vcxproj",
+        "projectJsonPath": "C:\\Users\\amunr\\Projects\\AmeisenNavigation\\AmeisenNavigation\\project.json",
+        "packagesPath": "C:\\Users\\amunr\\.nuget\\packages\\",
+        "projectStyle": "ProjectJson",
+        "validateRuntimeAssets": true,
+        "configFilePaths": [
+          "C:\\Users\\amunr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net40": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "dependencies": {
+        "GCCBuildTargets": "[1.*, )"
+      },
+      "frameworks": {
+        "net40": {}
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
